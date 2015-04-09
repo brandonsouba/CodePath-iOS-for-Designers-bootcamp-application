@@ -15,6 +15,22 @@
                             <view contentMode="scaleToFill" id="H1w-vD-CtF">
                                 <rect key="frame" x="0.0" y="-34" width="323" height="189"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="i8r-f3-QS0">
+                                        <rect key="frame" x="17" y="81" width="288" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                                        <segments>
+                                            <segment title="18%"/>
+                                            <segment title="20%"/>
+                                            <segment title="22%"/>
+                                        </segments>
+                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="onEditingChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="cMj-y9-ijc"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="0.35000000000000003" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -40,7 +56,7 @@
                                         <rect key="frame" x="17" y="39" width="154" height="29"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" red="0.66361756350267376" green="0.27850178977255979" blue="0.012025168792563183" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -54,27 +70,26 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter bill amount" adjustsFontSizeToFit="NO" minimumFontSize="17" id="AFV-Jj-SMa">
-                                <rect key="frame" x="55" y="102" width="249" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter bill amount" minimumFontSize="17" id="AFV-Jj-SMa">
+                                <rect key="frame" x="55" y="102" width="175" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="24"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="40"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                 <connections>
                                     <action selector="onEditingChanged:" destination="vXZ-lx-hvc" eventType="editingChanged" id="ebn-zf-e21"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter tip percentage" adjustsFontSizeToFit="NO" minimumFontSize="17" id="n0h-bw-0sL">
-                                <rect key="frame" x="55" y="185" width="249" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter bill amount" minimumFontSize="17" id="Pj6-fa-1vc">
+                                <rect key="frame" x="55" y="185" width="175" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="24"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="40"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                 <connections>
-                                    <action selector="onEditingChanged:" destination="vXZ-lx-hvc" eventType="editingChanged" id="9XD-dm-ypo"/>
-                                    <action selector="tipAction:" destination="vXZ-lx-hvc" eventType="editingDidEnd" id="i1A-fh-9ul"/>
+                                    <action selector="onEditingChanged:" destination="vXZ-lx-hvc" eventType="editingChanged" id="W01-rk-yRU"/>
                                 </connections>
                             </textField>
                         </subviews>
@@ -87,8 +102,8 @@
                     <connections>
                         <outlet property="background" destination="c0y-3x-Lph" id="mez-Rj-F1p"/>
                         <outlet property="billField" destination="AFV-Jj-SMa" id="Zge-83-Yao"/>
-                        <outlet property="fdsfasdfsd" destination="n0h-bw-0sL" id="Y5l-S3-cCc"/>
-                        <outlet property="tipField" destination="n0h-bw-0sL" id="3o2-vq-iJj"/>
+                        <outlet property="tipControl" destination="i8r-f3-QS0" id="FXa-NV-MGO"/>
+                        <outlet property="tipField" destination="Pj6-fa-1vc" id="X2A-fw-V3B"/>
                         <outlet property="totalLabel" destination="t7g-Ew-x2I" id="Bac-rM-DPX"/>
                     </connections>
                 </viewController>
